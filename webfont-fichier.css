@@ -1,0 +1,33 @@
+@font-face {
+    font-family: 'bluu';
+    src: url('fonts/bluunext-bold-webfont.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'bluu';
+    src: url('fonts/bluunext-bolditalic-webfont.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'bluu_nexttitling';
+    src: url('fonts/bluunext-titling.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body,
+h1 {
+  font-family: bluu;
+}
+
+h2 {
+  font-style: italic;
+}
+
+.titling {
+  font-family: bluu_nexttitling;
+}

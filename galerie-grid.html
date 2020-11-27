@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galerie Grid</title>
+  <link rel="stylesheet" href="galerie-grid.css">
+
+</head>
+
+<body>
+  <p>Exemple de galerie provenant du livre "<a href="https://goetter.fr/livres/gridlayout/">Grid Layout</a>" par Raphaël
+    Goetter.</p>
+  <div class="container">
+
+    <img src="images/bruno-emmanuelle-1GfGZ1SXsAg-unsplash.jpg" alt="">
+    <img src="images/bruno-emmanuelle-sgfU7G0JIbU-unsplash.jpg" alt="">
+    <img src="images/daniel-j-schwarz-REjuIrs2YaM-unsplash.jpg" alt="">
+    <img src="images/daoud-abismail-Elv0Gk2fCzo-unsplash.jpg" alt="">
+    <img src="images/julian-villella-1hgmQhqlf-Q-unsplash.jpg" alt="">
+    <img src="images/meiying-ng-i8Zgi4FsUUM-unsplash.jpg" alt="">
+    <img src="images/ravi-sharma-3yY7CZXUYG8-unsplash.jpg" alt="">
+    <img src="images/xps-ocAuPlfZXEc-unsplash.jpg" alt="">
+    <img src="images/yulia-matvienko-oe4KaKCcnsU-unsplash.jpg" alt="">
+
+  </div>
+
+  <script>
+    var pics = document.querySelectorAll('.container > img');
+
+    console.log("working");
+
+    for (var i = 0; i < pics.length; i++) {
+      pics[i].addEventListener('load', function () {
+        var width = this.naturalWidth;
+        var height = this.naturalHeight;
+        console.log("naturalWidth:" + width);
+        if (width > height) this.classList.add('landscape');
+        if (width < height) this.classList.add('portrait');
+        if (width == height) this.classList.add('square');
+      });
+    };
+  </script>
+</body>
+
+</html>
