@@ -1,0 +1,40 @@
+.navigation {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation a {
+  display: block;
+  padding: 1em;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navigation {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+}
+
+@media (max-width: 800px) {
+  .navigation {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .navigation {
+    flex-flow: column wrap;
+  }
+}
+
+/* Décoration */
+
+.navigation {
+  background: deepskyblue;
+}
+
+.navigation a {
+  color: white;
+}
